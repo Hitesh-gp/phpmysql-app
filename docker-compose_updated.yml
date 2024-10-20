@@ -4,7 +4,7 @@ services:
        build:
                context: ./php/online-shopping-system
                dockerfile: Dockerfile_update_webapp
-       image: hiteshdocker31/bdaecommphp:latest
+       image: sreedocker123/bdaecommphp:latest
        container_name: php_app
        depends_on:
          - db
@@ -14,14 +14,14 @@ services:
           build:
                   context: ./php/online-shopping-system/database
                   dockerfile: Dockerfile_db
-          image: hiteshdocker31/bdaecommdb:latest
+          image: sreedocker123/bdaecommdb:latest
           container_name: mysqli
-          command: --default-authentication-plugin=mysql_native_password
+          #command: --default-authentication-plugin=mysql_native_password
           restart: always
           environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: myecommerce
-            MYSQL_USER: hitesh
-            MYSQL_PASSWORD: cloud@321
+            MYSQL_USER: msois
+            MYSQL_PASSWORD: Msois@123
           ports:
            - 6033:3306
